@@ -1,0 +1,59 @@
+{
+  "title": "MikroTik WiFi Registration Table",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to MikroTik router",
+        "description": "Enter the RouterOS API connection details.",
+        "data": {
+          "host": "Host",
+          "username": "Username",
+          "password": "Password",
+          "port": "Port",
+          "poll_interval": "Poll interval (seconds)"
+        }
+      },
+      "select_devices": {
+        "title": "Select WiFi clients",
+        "description": "Choose the WiFi clients that should be tracked from the current registration table.",
+        "data": {
+          "tracked_devices": "Tracked devices"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the router.",
+      "invalid_auth": "Invalid username or password.",
+      "unsupported_router": "RouterOS 7 WiFi registration table is not available on this router.",
+      "no_devices_found": "No WiFi clients are currently visible in the registration table.",
+      "no_devices_selected": "Select at least one WiFi client to continue.",
+      "unknown": "Unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This MikroTik router is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update tracked devices",
+        "description": "Adjust the polling behavior and the tracked WiFi clients.",
+        "data": {
+          "poll_interval": "Poll interval (seconds)",
+          "grace_period": "Grace period (seconds)",
+          "tracked_devices": "Tracked devices",
+          "manual_mac": "Manual MAC address",
+          "manual_name": "Manual friendly name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the router.",
+      "invalid_auth": "Invalid username or password.",
+      "unsupported_router": "RouterOS 7 WiFi registration table is not available on this router.",
+      "no_devices_selected": "Select at least one WiFi client to continue.",
+      "unknown": "Unexpected error occurred.",
+      "invalid_mac": "The manually entered MAC address is invalid."
+    }
+  }
+}
